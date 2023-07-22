@@ -74,18 +74,18 @@ endf
 comm -count=1 -nargs=* SelectIndentedBlocks
       \ call <SID>SelectIndentedBlocks(<count>, <f-args>)
 
-omap ii <Plug>SelectIndentedBlocksI
+omap <silent> ii <Plug>SelectIndentedBlocksI
 map <Plug>SelectIndentedBlocksI
       \ :<c-u>exe "SelectIndentedBlocks" v:count1 0<cr>
 
-omap ai <Plug>SelectIndentedBlocksA
+omap <silent> ai <Plug>SelectIndentedBlocksA
 map <Plug>SelectIndentedBlocksA
       \ :<c-u>exe "SelectIndentedBlocks" v:count1 1<cr>
 
-vmap ii <Plug>VSelectIndentedBlocksI
+vmap <silent> ii <Plug>VSelectIndentedBlocksI
 map <Plug>VSelectIndentedBlocksI
       \ :<c-u>exe "SelectIndentedBlocks" v:count1 0 line("'<") line("'>")<cr>
 
-vmap ai <Plug>VSelectIndentedBlocksA
+vmap <silent> ai <Plug>VSelectIndentedBlocksA
 map <Plug>VSelectIndentedBlocksA
       \ :<c-u>exe "SelectIndentedBlocks" v:count1 1 line("'<") line("'>")<cr>
